@@ -26,7 +26,7 @@ describe('SearchForm', () => {
     const onChange = vi.fn();
     render(<SearchForm value="processo" isLoading={false} onChange={onChange} onSubmit={onSubmit} />);
 
-    fireEvent.submit(screen.getByRole('form'));
+    fireEvent.submit(screen.getByRole('button', { name: 'Buscar' }).closest('form')!);
     fireEvent.click(screen.getByRole('button', { name: 'Limpar busca' }));
 
     expect(onSubmit).toHaveBeenCalledOnce();
