@@ -1,0 +1,40 @@
+import type { DocumentDetails } from '../types/document';
+
+export const documents: DocumentDetails[] = [
+  {
+    id: '123',
+    title: 'Processo de indenização por danos materiais',
+    type: 'Processo',
+    date: '2026-08-20',
+    description: 'Ação relacionada a pedido de reparação por danos materiais e morais.',
+    processNumber: '0000000-00.2026.8.26.0000',
+    parties: ['Marina Alves', 'Seguradora Horizonte S.A.'],
+    court: 'Tribunal de Justiça de São Paulo',
+    status: 'Em andamento',
+    summary: 'A parte autora solicita indenização após a negativa de cobertura de um sinistro.',
+  },
+  {
+    id: '456',
+    title: 'Ação de obrigação de fazer',
+    type: 'Processo',
+    date: '2026-07-14',
+    description: 'Pedido para cumprimento de obrigação contratual com tutela de urgência.',
+    processNumber: '1002345-19.2026.8.26.0100',
+    parties: ['Ana Beatriz Costa', 'Operadora Vida Plena'],
+    court: '2ª Vara Cível de São Paulo',
+    status: 'Aguardando decisão',
+    summary: 'Discussão sobre a autorização de procedimento médico previsto em contrato.',
+  },
+  {
+    id: '789',
+    title: 'Recurso sobre relação de consumo',
+    type: 'Acórdão',
+    date: '2026-06-02',
+    description: 'Decisão colegiada sobre falha na prestação de serviço ao consumidor.',
+    processNumber: '1019988-44.2025.8.26.0053',
+    parties: ['João Pereira', 'Comércio Digital Ltda.'],
+    court: '5ª Câmara de Direito Privado',
+    status: 'Publicado',
+    summary: 'O colegiado analisou a responsabilidade do fornecedor por cobrança indevida.',
+  },
+];
