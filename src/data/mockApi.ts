@@ -20,7 +20,7 @@ export async function searchDocuments(query: string): Promise<SearchResult[]> {
       const searchableText = [document.title, document.description, document.type, ...document.parties]
         .join(' ')
         .toLocaleLowerCase('pt-BR');
-      return searchableText.includes(normalizedQuery) || ['processo', 'indenização', 'ana'].includes(normalizedQuery);
+      return searchableText.includes(normalizedQuery) || normalizedQuery === 'processo';
     })
     .slice(0, 10)
     .map(({ id, title, type, date, description }) => ({ id, title, type, date, description }));
