@@ -72,7 +72,7 @@ function DocumentPage() {
   const location = useLocation();
   const [document, setDocument] = useState<DocumentDetailsType | null>(null);
   const [status, setStatus] = useState<'loading' | 'success' | 'not-found' | 'error'>('loading');
-  const titleRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     let active = true;
@@ -91,7 +91,7 @@ function DocumentPage() {
 
   return <Shell><main className="main-content detail-page"><button className="back-button" type="button" onClick={backToSearch}><span aria-hidden="true">←</span> Voltar para resultados</button><div className="detail-surface" aria-live="polite">
     {status === 'loading' && <div className="detail-loading" role="status"><span className="spinner" aria-hidden="true" /><h1 tabIndex={-1} ref={(element) => { titleRef.current = element; }}>Carregando detalhes</h1><p>Estamos preparando as informações deste documento.</p></div>}
-    {status === 'success' && document && <div ref={(element) => { titleRef.current = element; }} tabIndex={-1}><DocumentDetails document={document} /></div>}
+    {status === 'success' && document && <div><DocumentDetails document={document} titleRef={titleRef} /></div>}
     {status === 'not-found' && <div className="detail-message"><span className="state-mark muted-mark">?</span><h1 tabIndex={-1} ref={(element) => { titleRef.current = element; }}>Documento não encontrado</h1><p>Esse documento não está disponível nos dados da demonstração.</p><button className="primary-button compact-button" type="button" onClick={backToSearch}>Voltar para busca</button></div>}
     {status === 'error' && <div className="detail-message"><span className="state-mark error-mark">!</span><h1 tabIndex={-1} ref={(element) => { titleRef.current = element; }}>Detalhes indisponíveis</h1><p>Não foi possível carregar este documento agora.</p><button className="primary-button compact-button" type="button" onClick={() => window.location.reload()}>Tentar novamente</button></div>}
   </div></main></Shell>;

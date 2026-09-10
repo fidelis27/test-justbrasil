@@ -1,10 +1,11 @@
 import type { DocumentDetails as DocumentDetailsType } from '../types/document';
+import type { Ref } from 'react';
 
-type DocumentDetailsProps = { document: DocumentDetailsType };
+type DocumentDetailsProps = { document: DocumentDetailsType; titleRef?: Ref<HTMLHeadingElement> };
 
-export function DocumentDetails({ document }: DocumentDetailsProps) {
+export function DocumentDetails({ document, titleRef }: DocumentDetailsProps) {
   return <>
-    <div className="detail-heading"><div><span className="eyebrow">{document.type}</span><h1>{document.title}</h1></div><span className="status-badge">{document.status}</span></div>
+    <div className="detail-heading"><div><span className="eyebrow">{document.type}</span><h1 ref={titleRef}>{document.title}</h1></div><span className="status-badge">{document.status}</span></div>
     <p className="detail-description">{document.description}</p>
     <dl className="detail-grid">
       <div><dt>Número do processo</dt><dd className="breakable">{document.processNumber}</dd></div>

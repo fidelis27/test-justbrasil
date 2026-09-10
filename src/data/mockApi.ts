@@ -17,13 +17,13 @@ export async function searchDocuments(query: string): Promise<SearchResult[]> {
 
   return documents
     .filter((document) => {
-      const searchableText = [document.title, document.description, document.type, ...document.parties]
+      const searchableText = [document.title, document.description, document.type, document.processNumber, ...document.parties]
         .join(' ')
         .toLocaleLowerCase('pt-BR');
       return searchableText.includes(normalizedQuery) || normalizedQuery === 'processo';
     })
     .slice(0, 10)
-    .map(({ id, title, type, date, description }) => ({ id, title, type, date, description }));
+    .map(({ id, title, type, date, description, processNumber }) => ({ id, title, type, date, description, processNumber }));
 }
 
 export async function getDocumentById(id: string): Promise<DocumentDetails> {

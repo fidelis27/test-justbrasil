@@ -24,9 +24,6 @@ src/
   data/
     documents.ts
     mockApi.ts
-  pages/
-    SearchPage.tsx
-    DocumentPage.tsx
   types/
     document.ts
   App.tsx
@@ -107,8 +104,7 @@ O estado será local às páginas, sem biblioteca global:
 - `SearchResultCard`: apresentação de resultado e link para detalhes.
 - `SearchState`: estados inicial, loading, vazio e erro.
 - `DocumentDetails`: campos completos do documento.
-- `SearchPage`: coordenação da busca.
-- `DocumentPage`: carregamento e estados do detalhe.
+- `App`: coordenação das rotas e das views de busca e detalhe.
 
 ## Responsividade e acessibilidade
 
@@ -132,6 +128,7 @@ O estado será local às páginas, sem biblioteca global:
 
 - Instalar dependências e executar o servidor de desenvolvimento.
 - Executar `npm run build`.
+- Executar `npm run test:coverage` e revisar o relatório antes da entrega.
 - Testar `processo`, `vazio` e `erro`.
 - Testar detalhe válido, id `999` e id inexistente.
 - Verificar teclado, desktop e mobile.

@@ -10,12 +10,19 @@ describe('searchDocuments', () => {
       id: '123',
       title: 'Processo de indenização por danos materiais',
       type: 'Processo',
+      processNumber: '0000000-00.2026.8.26.0000',
     });
-    expect(results[0]).not.toHaveProperty('processNumber');
   });
 
   it('matches queries without case sensitivity', async () => {
     const results = await searchDocuments('INDENIZAÇÃO');
+
+    expect(results).toHaveLength(1);
+    expect(results[0].id).toBe('123');
+  });
+
+  it('finds a document by its process number', async () => {
+    const results = await searchDocuments('0000000-00.2026.8.26.0000');
 
     expect(results).toHaveLength(1);
     expect(results[0].id).toBe('123');

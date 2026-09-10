@@ -43,7 +43,9 @@ h1, h2, h3, p { margin-top: 0; }
 .result-card:hover, .result-card:focus-visible { border-color: #7ca08a; box-shadow: 0 9px 25px rgba(38, 69, 54, .08); transform: translateY(-3px); outline: none; }
 .result-card-top { display: flex; justify-content: space-between; gap: 15px; color: #7a8780; font-size: .72rem; }
 .document-type { color: #4f7663; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.result-card h3 { margin: 28px 0 12px; color: #244638; font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.08rem; font-weight: 700; line-height: 1.4; }
+.result-card h3 { margin: 28px 0 9px; color: #244638; font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.08rem; font-weight: 700; line-height: 1.4; }
+.process-number { display: block; margin-bottom: 11px; color: #52685c; font-family: 'DM Sans', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .02em; overflow-wrap: anywhere; }
+.process-label { color: #7b8880; font-size: .65rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .result-card p { margin-bottom: 20px; color: #6a7770; font-size: .86rem; line-height: 1.6; }
 .result-link { margin-top: auto; color: #32644e; font-size: .8rem; font-weight: 700; }
 .state-panel { display: flex; gap: 18px; min-height: 150px; align-items: center; padding: 32px; border: 1px solid #dce4dc; background: rgba(255,255,255,.65); }

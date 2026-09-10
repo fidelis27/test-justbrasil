@@ -4,6 +4,7 @@ export type SearchResult = {
   type: string;
   date: string;
   description: string;
+  processNumber?: string;
 };
 
 export type DocumentDetails = SearchResult & {
