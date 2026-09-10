@@ -1,6 +1,6 @@
 # Busca Jurídica
 
-Protótipo funcional desenvolvido para um desafio técnico do Jusbrasil.
+Protótipo funcional desenvolvido para um desafio técnico do LexRadar.
 
 ## Sobre o desafio
 

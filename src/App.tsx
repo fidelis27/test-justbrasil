@@ -9,11 +9,11 @@ import { getDocumentById, searchDocuments } from './data/mockApi';
 import type { DocumentDetails as DocumentDetailsType, SearchResult } from './types/document';
 
 function Brand() {
-  return <Link className="brand" to="/"><span className="brand-mark">J</span><span>jusbrasil</span></Link>;
+  return <Link className="brand" to="/"><span className="brand-mark">L</span><span>lexradar</span></Link>;
 }
 
 function Shell({ children }: { children: ReactNode }) {
-  return <div className="app-shell"><header className="site-header"><div className="header-inner"><Brand /><span className="header-context">Pesquisa jurídica</span></div></header>{children}<footer className="site-footer"><span>Jusbrasil</span><span>Informação jurídica para decisões melhores</span></footer></div>;
+  return <div className="app-shell"><header className="site-header"><div className="header-inner"><Brand /><span className="header-context">Pesquisa jurídica</span></div></header>{children}<footer className="site-footer"><span>LexRadar</span><span>Informação jurídica para decisões melhores</span></footer></div>;
 }
 
 function SearchPage() {

@@ -6,7 +6,7 @@
 
 ## Contexto e objetivo
 
-O Jusbrasil quer melhorar a pesquisa de informações jurídicas. O MVP permitirá pesquisar documentos por nome, número de processo ou palavra-chave e consultar os detalhes de um resultado em desktop e mobile. O prazo estimado para o protótipo é de aproximadamente 60 minutos.
+O LexRadar quer melhorar a pesquisa de informações jurídicas. O MVP permitirá pesquisar documentos por nome, número de processo ou palavra-chave e consultar os detalhes de um resultado em desktop e mobile. O prazo estimado para o protótipo é de aproximadamente 60 minutos.
 
 ## Requisitos
 
