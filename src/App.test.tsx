@@ -16,6 +16,18 @@ describe('application flows', () => {
     expect(screen.getByRole('alert')).toHaveTextContent('pelo menos 2 caracteres');
   });
 
+  it('hides previous results when a short search is submitted', async () => {
+    renderApp('/?q=processo');
+    expect(await screen.findByRole('heading', { name: 'Documentos sobre “processo”' })).toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: 'a' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Buscar' }));
+
+    expect(screen.getByRole('alert')).toHaveTextContent('pelo menos 2 caracteres');
+    expect(screen.queryByRole('heading', { name: 'Documentos sobre “processo”' })).not.toBeInTheDocument();
+    expect(screen.getByText('Comece uma pesquisa')).toBeInTheDocument();
+  });
+
   it('restores a search from the query string and shows results', async () => {
     renderApp('/?q=processo');
 

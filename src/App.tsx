@@ -28,6 +28,9 @@ function SearchPage() {
   const performSearch = async (value = query) => {
     const normalizedQuery = value.trim();
     if (normalizedQuery.length < 2) {
+      setStatus('idle');
+      setResults([]);
+      setSubmittedQuery('');
       setError('Digite pelo menos 2 caracteres para pesquisar.');
       return;
     }
